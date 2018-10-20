@@ -9,10 +9,11 @@ namespace FootDream.Mobile.Services
 	public class NewsService : INewsService
 	{
 		private readonly static HttpClient httpClient = new HttpClient();
+		private const string newsEndpoint = "https://footdream.azurewebsites.net/api/news";
 
 		public async Task<IReadOnlyList<NewsArticle>> GetAsync() 
 		{
-			var response = await httpClient.GetStringAsync("https://localhost:5001/api/news");
+			var response = await httpClient.GetStringAsync(newsEndpoint);
 			return JsonConvert.DeserializeObject<List<NewsArticle>>(response).AsReadOnly();
 		}
 	}
