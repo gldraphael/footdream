@@ -27,6 +27,7 @@ namespace FootDream.Web
         public void ConfigureServices(IServiceCollection services)
         {
 			services.AddRouting(options => options.LowercaseUrls = true)
+			        .AddResponseCaching()
 					.AddMvc();
 			services.AddTransient<INewsService, SimpleNewsService>();
         }
@@ -39,6 +40,7 @@ namespace FootDream.Web
                 app.UseDeveloperExceptionPage();
             }
 
+			app.UseResponseCaching();
             app.UseHttpsRedirection();
             app.UseMvc();
         }

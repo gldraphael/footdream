@@ -8,6 +8,7 @@ namespace FootDream.Web.Controllers
 	public class NewsController : Controller
 	{
 		[HttpGet("")]
+		[ResponseCache(Duration = 1_800)] // 30 minutes
 		public async Task<IActionResult> GetNews([FromServices]INewsService news) => 
 			Ok(await news.GetAsync());
 	}
