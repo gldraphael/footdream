@@ -9,7 +9,7 @@ namespace FootDream.Mobile.Views
 		public NewsPage()
 		{
 			InitializeComponent();
-			BindingContext = vm = new NewsListVM();
+			BindingContext = vm = VMFactory.NewsList;
 		}
 
 		protected override void OnAppearing()

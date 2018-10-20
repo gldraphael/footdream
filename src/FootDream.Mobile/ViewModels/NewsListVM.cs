@@ -11,7 +11,7 @@ namespace FootDream.Mobile.ViewModels
 {
 	public class NewsListVM : BaseViewModel
 	{
-		public ObservableCollection<NewsArticle> News { get; }
+		public ObservableCollection<NewsArticle> News { get; set; }
 		public Command LoadNewsCommand { get; }
 
 		public NewsListVM()
