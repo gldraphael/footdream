@@ -20,4 +20,8 @@
   <ItemGroup>
     <Folder Include="ViewModels\DesignTime\" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Views\ItemDetailPage.xaml.cs" />
+    <Compile Remove="ViewModels\ItemsViewModel.cs" />
+  </ItemGroup>
 </Project>

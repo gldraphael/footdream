@@ -3,17 +3,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-using Xamarin.Forms;
-
-using FootDream.Mobile.Models;
-using FootDream.Mobile.Services;
-
 namespace FootDream.Mobile.ViewModels
 {
 	public class BaseViewModel : INotifyPropertyChanged
 	{
-		public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>() ?? new MockDataStore();
-
 		bool isBusy = false;
 		public bool IsBusy
 		{
